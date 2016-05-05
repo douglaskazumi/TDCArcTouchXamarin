@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="TDCArcTouch.SelectableAvatar">
+	<ContentView.Resources>
+		<ResourceDictionary>
+			<Rectangle x:Key="checkBounds">1,0,0.3,0.3</Rectangle>
+		</ResourceDictionary>
+	</ContentView.Resources>
+
+	<AbsoluteLayout BackgroundColor="Black">
+		<AbsoluteLayout.GestureRecognizers>
+			<TapGestureRecognizer Tapped="OnTapped" />
+		</AbsoluteLayout.GestureRecognizers>
+
+		<Image x:Name="avatar"
+			Aspect="AspectFit"
+			InputTransparent="true"
+			VerticalOptions="FillAndExpand"
+			HorizontalOptions="FillAndExpand"
+			AbsoluteLayout.LayoutBounds="0,0,1,1"
+			AbsoluteLayout.LayoutFlags="All"/>
+
+		<ContentView x:Name="checkBackground"
+			Opacity="0.5"
+			BackgroundColor="White"
+			InputTransparent="true"
+			AbsoluteLayout.LayoutBounds="{StaticResource checkBounds}"
+			AbsoluteLayout.LayoutFlags="All">
+		</ContentView>
+
+		<Image x:Name="checkImage"
+			Source="{StaticResource checkMark}"
+			InputTransparent="true"
+			AbsoluteLayout.LayoutBounds="{StaticResource checkBounds}"
+			AbsoluteLayout.LayoutFlags="All" />
+
+	</AbsoluteLayout>
+</ContentView>

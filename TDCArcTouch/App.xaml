@@ -1,0 +1,27 @@
+﻿<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TDCArcTouch.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Colors-->
+            <Color x:Key="Orange">#FF8300</Color>
+            <Color x:Key="Grey">#55565A</Color>
+             
+            <!--Images-->
+            <FileImageSource x:Key="mommAvatar" File="momm"/>
+            <FileImageSource x:Key="kazumiAvatar" File="kazumi.jpg"/>
+            <FileImageSource x:Key="defaultAvatar" File="avatar.png"/>
+            <FileImageSource x:Key="checkMark" File="checkmark"/>
+
+            <!-- Converters -->
+<!--            <converters:StringToWebViewSourceConverter x:Key="StringToWebViewSourceConverter" />-->
+
+            <!-- Styles -->
+<!--            <Style x:Key="CoolGreyBookLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FranklinGothicBook}" />
+                <Setter Property="TextColor" Value="{StaticResource CoolGreyColor}"/>
+            </Style>-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

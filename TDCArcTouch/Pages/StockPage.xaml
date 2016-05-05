@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:custom="clr-namespace:TDCArcTouch;assembly=TDCArcTouch"
+	x:Class="TDCArcTouch.StockPage">
+
+	<StackLayout Orientation="Vertical"
+		Padding="30"
+		VerticalOptions="FillAndExpand">
+
+		<StackLayout Orientation="Horizontal" HeightRequest="100">
+			<custom:SelectableAvatar Source="{StaticResource mommAvatar}" Selected="{Binding MommSelected}"/>
+			<custom:SelectableAvatar Source="{StaticResource defaultAvatar}" Selected="{Binding DefaultSelected}"/>
+			<custom:SelectableAvatar Source="{StaticResource kazumiAvatar}" Selected="{Binding KazumiSelected}"/>
+		</StackLayout>
+
+		<Entry Text="{Binding Name}"
+			VerticalOptions="CenterAndExpand"
+			Placeholder="Entre seu nome" />
+
+		<Button Text="Terms and Conditions" 
+			VerticalOptions="EndAndExpand"
+			BackgroundColor="White" 
+			TextColor="{StaticResource Grey}" />
+
+		<Button Text="Next" 
+			Command="{Binding NextButtonCommand}"
+			BackgroundColor="{StaticResource Orange}" 
+			TextColor="{StaticResource Grey}" 
+			HorizontalOptions="Center"
+			VerticalOptions="End"
+			WidthRequest="200" />
+
+	</StackLayout>
+</ContentPage>
