@@ -29,11 +29,14 @@ namespace TDCArcTouch
         private string name;
 
         public StockPageModel()
-        {
-            NextButtonCommand = new Command(NextButtonTapped);
+		{
+			NextButtonCommand = new Command(NextButtonTapped);
+			TaCButtonCommand = new Command(TaCButtonTapped);
         }
 
-        public ICommand NextButtonCommand { get; set; }
+		public ICommand NextButtonCommand { get; set; }
+
+		public ICommand TaCButtonCommand { get; set; }
         
         public bool MommSelected
         {
@@ -128,7 +131,12 @@ namespace TDCArcTouch
             {
                 await (App.Current as App).DisplayAlert("Selecione um avatar e informe seu nome.");
             }
-        }
+		}
+
+		private void TaCButtonTapped()
+		{
+			Device.OpenUri(new Uri("http://www.arctouch.com"));
+		}
     }
 }
 

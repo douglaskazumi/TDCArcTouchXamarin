@@ -18,7 +18,8 @@
 			VerticalOptions="CenterAndExpand"
 			Placeholder="Entre seu nome" />
 
-		<Button Text="Terms and Conditions" 
+		<Button Text="Termos e Condições" 
+			Command="{Binding TaCButtonCommand}"
 			VerticalOptions="EndAndExpand"
 			BackgroundColor="White" 
 			TextColor="{StaticResource Grey}" />
@@ -29,7 +30,8 @@
 			TextColor="{StaticResource Grey}" 
 			HorizontalOptions="Center"
 			VerticalOptions="End"
-			WidthRequest="200" />
+			WidthRequest="200"
+			BorderRadius="0" />
 
 	</StackLayout>
 </ContentPage>

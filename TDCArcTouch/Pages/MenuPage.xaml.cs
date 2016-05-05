@@ -44,7 +44,22 @@ namespace TDCArcTouch
             masterPageItems.Add(new MenuPageItem { Title = "Advanced Page", TargetType = typeof(StockPage) });
 
             listView.ItemsSource = masterPageItems;
-        }
+		}
+
+		private void OnFreepikLinkTapped(object sender, EventArgs e)
+		{
+			Device.OpenUri(new Uri("http://www.freepik.com"));
+		}
+
+		private void OnFlatIconLinkTapped(object sender, EventArgs e)
+		{
+			Device.OpenUri(new Uri("http://www.flaticon.com"));
+		}
+
+		private void OnCCLinkTapped(object sender, EventArgs e)
+		{
+			Device.OpenUri(new Uri("http://creativecommons.org/licenses/by/3.0/"));
+		}
     }
 }
 

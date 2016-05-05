@@ -21,14 +21,6 @@
 			AbsoluteLayout.LayoutBounds="0,0,1,1"
 			AbsoluteLayout.LayoutFlags="All"/>
 
-		<ContentView x:Name="checkBackground"
-			Opacity="0.5"
-			BackgroundColor="White"
-			InputTransparent="true"
-			AbsoluteLayout.LayoutBounds="{StaticResource checkBounds}"
-			AbsoluteLayout.LayoutFlags="All">
-		</ContentView>
-
 		<Image x:Name="checkImage"
 			Source="{StaticResource checkMark}"
 			InputTransparent="true"

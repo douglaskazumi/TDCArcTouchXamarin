@@ -64,7 +64,6 @@ namespace TDCArcTouch
         {
             Selected = selected;
             this.checkImage.IsVisible = Selected;
-            this.checkBackground.IsVisible = Selected;
         }
 
         public void SetSource(string source)
