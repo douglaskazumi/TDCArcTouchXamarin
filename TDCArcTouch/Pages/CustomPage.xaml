@@ -47,14 +47,21 @@
 				HorizontalOptions="CenterAndExpand"
 				VerticalOptions="EndAndExpand" />
 
-			<Button Text="Next" 
+			<custom:PressedView
 				Command="{Binding NextButtonCommand}"
-				BackgroundColor="{StaticResource Orange}" 
-				TextColor="{StaticResource Grey}" 
-				HorizontalOptions="Center"
-				VerticalOptions="End"
+				BackgroundColor="{StaticResource Orange}"
+				HeightRequest="50"
 				WidthRequest="200"
-				BorderRadius="0" />
+				HorizontalOptions="Center" >
+
+				<Label 
+					Text="Next" 
+					InputTransparent="true" 
+					HorizontalTextAlignment="Center" 
+					VerticalTextAlignment="Center"
+					TextColor="Black" />
+
+			</custom:PressedView>
 
 		</StackLayout>
 
