@@ -40,7 +40,7 @@ namespace TDCArcTouch
 
             var masterPageItems = new List<MenuPageItem>();
             masterPageItems.Add(new MenuPageItem { Title = "Stock Page", TargetType = typeof(StockPage) });
-            masterPageItems.Add(new MenuPageItem { Title = "Custom Page", TargetType = typeof(StockPage) });
+			masterPageItems.Add(new MenuPageItem { Title = "Custom Page", TargetType = typeof(CustomPage) });
             masterPageItems.Add(new MenuPageItem { Title = "Advanced Page", TargetType = typeof(StockPage) });
 
             listView.ItemsSource = masterPageItems;

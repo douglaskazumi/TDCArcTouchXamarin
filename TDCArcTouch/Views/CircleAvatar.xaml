@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:custom="clr-namespace:TDCArcTouch;assembly=TDCArcTouch"
+	x:Class="TDCArcTouch.CircleAvatar">
+
+		<custom:CircleImage x:Name="avatar"
+			Aspect="AspectFit"
+			BorderColor="Gray"
+			BorderWidth="8"
+			WidthRequest="100"
+			HeightRequest="100" >
+
+			<custom:CircleImage.GestureRecognizers>
+				<TapGestureRecognizer Tapped="OnTapped" />
+			</custom:CircleImage.GestureRecognizers>
+		</custom:CircleImage>
+</ContentView>
