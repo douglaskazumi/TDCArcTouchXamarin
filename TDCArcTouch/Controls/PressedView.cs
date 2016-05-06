@@ -18,12 +18,6 @@ namespace TDCArcTouch
 {
 	public class PressedView : ContentView
 	{
-		#region Constants
-
-		private const int TAPPED_STATE_DELAY = 350;
-
-		#endregion
-
 		public static readonly BindableProperty CommandProperty = BindableProperty.Create("Command", typeof(ICommand), typeof(PressedView), null, BindingMode.OneWay, null, delegate(BindableObject bindable, object oldValue, object newValue)
 			{
 				((PressedView)bindable).OnCommandChanged((ICommand)oldValue, (ICommand)newValue);
