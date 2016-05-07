@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <custom:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:custom="clr-namespace:TDCArcTouch;assembly=TDCArcTouch"
@@ -16,25 +16,45 @@
 		              x:TypeArguments="StackOrientation"
 		              Phone="Horizontal"
 		              Tablet="Vertical" />
+
+		  <OnIdiom x:Key="avatarPadding"
+		              x:TypeArguments="Thickness"
+		              Phone="0"
+		              Tablet="0,100,0,200" />
 		</ResourceDictionary>
 	</custom:BaseContentPage.Resources>
+	<AbsoluteLayout>
+		<StackLayout Orientation="{StaticResource stackOrientation}"
+			Padding="30"
+			Spacing="50"
+			VerticalOptions="FillAndExpand"
+			AbsoluteLayout.LayoutBounds="0,0,1,1"
+			AbsoluteLayout.LayoutFlags="All">
 
-	<StackLayout Orientation="{StaticResource stackOrientation}"
-		Padding="30"
-		Spacing="50"
-		VerticalOptions="FillAndExpand">
+			<StackLayout Orientation="{StaticResource avatarOrientation}"
+				Padding="{StaticResource avatarPadding}">
+				<ContentView VerticalOptions="FillAndExpand">
+					<custom:CircleAvatar Source="{StaticResource mommAvatar}" 
+						Selected="{Binding MommSelected}" 
+						VerticalOptions="Center"/>
+				</ContentView>
+				<ContentView VerticalOptions="FillAndExpand">
+					<custom:CircleAvatar Source="{StaticResource defaultAvatar}" 
+						Selected="{Binding DefaultSelected}" 
+						VerticalOptions="Center"/>
+				</ContentView>
+				<ContentView VerticalOptions="FillAndExpand">
+					<custom:CircleAvatar Source="{StaticResource kazumiAvatar}" 
+						Selected="{Binding KazumiSelected}" 
+						VerticalOptions="Center"/>
+				</ContentView>
+			</StackLayout>
 
-		<StackLayout Orientation="{StaticResource avatarOrientation}">
-			<custom:CircleAvatar Source="{StaticResource mommAvatar}" Selected="{Binding MommSelected}"/>
-			<custom:CircleAvatar Source="{StaticResource defaultAvatar}" Selected="{Binding DefaultSelected}"/>
-			<custom:CircleAvatar Source="{StaticResource kazumiAvatar}" Selected="{Binding KazumiSelected}"/>
-		</StackLayout>
-
-		<StackLayout 
-			Orientation="Vertical"
-			Spacing="20"
-			HorizontalOptions="FillAndExpand"
-			VerticalOptions="FillAndExpand">
+			<StackLayout 
+				Orientation="Vertical"
+				Spacing="20"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand">
 
 			<custom:PressedView
 				Command="{Binding ShowColorPickerCommand}"
@@ -52,34 +72,46 @@
 
 			</custom:PressedView>
 
-			<Entry Text="{Binding Name}"
-				VerticalOptions="Start"
-				Placeholder="Entre seu nome" />
+				<Entry Text="{Binding Name}"
+					VerticalOptions="CenterAndExpand"
+					Placeholder="Entre seu nome" />
 
-			<custom:CustomWebView
-				Source="{Binding Html}"
-				HeightRequest="30"
-				WidthRequest="1000"
-				HorizontalOptions="CenterAndExpand"
-				VerticalOptions="EndAndExpand" />
+				<custom:CustomWebView
+					Source="{Binding Html}"
+					HeightRequest="30"
+					WidthRequest="1000"
+					HorizontalOptions="CenterAndExpand"
+					VerticalOptions="EndAndExpand" />
 
-			<custom:PressedView
-				Command="{Binding NextButtonCommand}"
-				BackgroundColor="{StaticResource Orange}"
-				HeightRequest="50"
-				WidthRequest="200"
-				HorizontalOptions="Center" >
+				<custom:PressedView
+					Command="{Binding NextButtonCommand}"
+					BackgroundColor="{StaticResource Orange}"
+					HeightRequest="50"
+					WidthRequest="200"
+					HorizontalOptions="Center" >
 
-				<Label 
-					Text="Next" 
-					InputTransparent="true" 
-					HorizontalTextAlignment="Center" 
-					VerticalTextAlignment="Center"
-					TextColor="Black" />
+					<Label 
+						Text="Next" 
+						InputTransparent="true" 
+						HorizontalTextAlignment="Center" 
+						VerticalTextAlignment="Center"
+						TextColor="Black" />
 
-			</custom:PressedView>
+				</custom:PressedView>
+
+			</StackLayout>
 
 		</StackLayout>
-
-	</StackLayout>
-</custom:BaseContentPage>
+		<ContentView IsVisible="{Binding IsLoading}"
+			BackgroundColor="Black" 
+			Opacity="0.5"
+			AbsoluteLayout.LayoutBounds="0,0,1,1"
+			AbsoluteLayout.LayoutFlags="All">
+			<ActivityIndicator VerticalOptions="Center"
+				HorizontalOptions="Center"
+				Color="{StaticResource Orange}"
+				IsRunning="{Binding IsLoading}"
+				IsVisible="{Binding IsLoading}" />
+		</ContentView>
+	</AbsoluteLayout>
+</ContentPage>

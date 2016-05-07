@@ -26,6 +26,12 @@ namespace TDCArcTouch
             await masterDetail.DisplayAlert(title,message,cancel);
         }
 
+        public void NavigateTo<T>()
+        {
+            var newPage = (Page)Activator.CreateInstance(typeof(T));
+            this.masterDetail.Detail = new NavigationPage(newPage);
+        }
+
         protected override void OnStart()
         {
             // Handle when your app starts

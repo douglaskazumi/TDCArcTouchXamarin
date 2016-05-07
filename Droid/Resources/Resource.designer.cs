@@ -1886,8 +1886,8 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0055
 			public const int action_bar = 2131361877;
 			
-			// aapt resource value: 0x7f0a002f
-			public const int action_bar_activity_content = 2131361839;
+			// aapt resource value: 0x7f0a0001
+			public const int action_bar_activity_content = 2131361793;
 			
 			// aapt resource value: 0x7f0a0054
 			public const int action_bar_container = 2131361876;
@@ -1895,8 +1895,8 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0050
 			public const int action_bar_root = 2131361872;
 			
-			// aapt resource value: 0x7f0a0030
-			public const int action_bar_spinner = 2131361840;
+			// aapt resource value: 0x7f0a0002
+			public const int action_bar_spinner = 2131361794;
 			
 			// aapt resource value: 0x7f0a0039
 			public const int action_bar_subtitle = 2131361849;
@@ -1910,11 +1910,11 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0078
 			public const int action_divider = 2131361912;
 			
-			// aapt resource value: 0x7f0a0031
-			public const int action_menu_divider = 2131361841;
+			// aapt resource value: 0x7f0a0003
+			public const int action_menu_divider = 2131361795;
 			
-			// aapt resource value: 0x7f0a0032
-			public const int action_menu_presenter = 2131361842;
+			// aapt resource value: 0x7f0a0004
+			public const int action_menu_presenter = 2131361796;
 			
 			// aapt resource value: 0x7f0a0052
 			public const int action_mode_bar = 2131361874;
@@ -1931,17 +1931,17 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0045
 			public const int alertTitle = 2131361861;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int always = 2131361835;
+			// aapt resource value: 0x7f0a0032
+			public const int always = 2131361842;
 			
 			// aapt resource value: 0x7f0a006c
 			public const int art = 2131361900;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int beginning = 2131361831;
+			// aapt resource value: 0x7f0a0030
+			public const int beginning = 2131361840;
 			
-			// aapt resource value: 0x7f0a0008
-			public const int bottom = 2131361800;
+			// aapt resource value: 0x7f0a0011
+			public const int bottom = 2131361809;
 			
 			// aapt resource value: 0x7f0a004b
 			public const int buttonPanel = 2131361867;
@@ -1952,14 +1952,14 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0075
 			public const int cancel_action = 2131361909;
 			
-			// aapt resource value: 0x7f0a000e
-			public const int center = 2131361806;
+			// aapt resource value: 0x7f0a0012
+			public const int center = 2131361810;
 			
-			// aapt resource value: 0x7f0a000d
-			public const int center_horizontal = 2131361805;
+			// aapt resource value: 0x7f0a0013
+			public const int center_horizontal = 2131361811;
 			
-			// aapt resource value: 0x7f0a000b
-			public const int center_vertical = 2131361803;
+			// aapt resource value: 0x7f0a0014
+			public const int center_vertical = 2131361812;
 			
 			// aapt resource value: 0x7f0a004d
 			public const int checkbox = 2131361869;
@@ -1967,14 +1967,14 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a007b
 			public const int chronometer = 2131361915;
 			
-			// aapt resource value: 0x7f0a0014
-			public const int clip_horizontal = 2131361812;
+			// aapt resource value: 0x7f0a001b
+			public const int clip_horizontal = 2131361819;
 			
-			// aapt resource value: 0x7f0a0013
-			public const int clip_vertical = 2131361811;
+			// aapt resource value: 0x7f0a001c
+			public const int clip_vertical = 2131361820;
 			
-			// aapt resource value: 0x7f0a002d
-			public const int collapseActionView = 2131361837;
+			// aapt resource value: 0x7f0a0033
+			public const int collapseActionView = 2131361843;
 			
 			// aapt resource value: 0x7f0a0046
 			public const int contentPanel = 2131361862;
@@ -1994,8 +1994,8 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a006b
 			public const int default_control_frame = 2131361899;
 			
-			// aapt resource value: 0x7f0a0021
-			public const int disableHome = 2131361825;
+			// aapt resource value: 0x7f0a0025
+			public const int disableHome = 2131361829;
 			
 			// aapt resource value: 0x7f0a0072
 			public const int disconnect = 2131361906;
@@ -2003,20 +2003,20 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0057
 			public const int edit_query = 2131361879;
 			
-			// aapt resource value: 0x7f0a0010
-			public const int end = 2131361808;
+			// aapt resource value: 0x7f0a0015
+			public const int end = 2131361813;
 			
 			// aapt resource value: 0x7f0a0080
 			public const int end_padder = 2131361920;
 			
-			// aapt resource value: 0x7f0a0002
-			public const int enterAlways = 2131361794;
+			// aapt resource value: 0x7f0a000a
+			public const int enterAlways = 2131361802;
 			
-			// aapt resource value: 0x7f0a0003
-			public const int enterAlwaysCollapsed = 2131361795;
+			// aapt resource value: 0x7f0a000b
+			public const int enterAlwaysCollapsed = 2131361803;
 			
-			// aapt resource value: 0x7f0a0001
-			public const int exitUntilCollapsed = 2131361793;
+			// aapt resource value: 0x7f0a000c
+			public const int exitUntilCollapsed = 2131361804;
 			
 			// aapt resource value: 0x7f0a003c
 			public const int expand_activities_button = 2131361852;
@@ -2024,29 +2024,29 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a004c
 			public const int expanded_menu = 2131361868;
 			
-			// aapt resource value: 0x7f0a0012
-			public const int fill = 2131361810;
-			
-			// aapt resource value: 0x7f0a0011
-			public const int fill_horizontal = 2131361809;
-			
-			// aapt resource value: 0x7f0a000c
-			public const int fill_vertical = 2131361804;
-			
-			// aapt resource value: 0x7f0a0018
-			public const int @fixed = 2131361816;
-			
-			// aapt resource value: 0x7f0a0033
-			public const int home = 2131361843;
+			// aapt resource value: 0x7f0a001d
+			public const int fill = 2131361821;
 			
 			// aapt resource value: 0x7f0a001e
-			public const int homeAsUp = 2131361822;
+			public const int fill_horizontal = 2131361822;
+			
+			// aapt resource value: 0x7f0a0016
+			public const int fill_vertical = 2131361814;
+			
+			// aapt resource value: 0x7f0a0021
+			public const int @fixed = 2131361825;
+			
+			// aapt resource value: 0x7f0a0005
+			public const int home = 2131361797;
+			
+			// aapt resource value: 0x7f0a0026
+			public const int homeAsUp = 2131361830;
 			
 			// aapt resource value: 0x7f0a0040
 			public const int icon = 2131361856;
 			
-			// aapt resource value: 0x7f0a002a
-			public const int ifRoom = 2131361834;
+			// aapt resource value: 0x7f0a0034
+			public const int ifRoom = 2131361844;
 			
 			// aapt resource value: 0x7f0a003d
 			public const int image = 2131361853;
@@ -2054,8 +2054,8 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a007f
 			public const int info = 2131361919;
 			
-			// aapt resource value: 0x7f0a0009
-			public const int left = 2131361801;
+			// aapt resource value: 0x7f0a0017
+			public const int left = 2131361815;
 			
 			// aapt resource value: 0x7f0a0079
 			public const int line1 = 2131361913;
@@ -2063,8 +2063,8 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a007d
 			public const int line3 = 2131361917;
 			
-			// aapt resource value: 0x7f0a001a
-			public const int listMode = 2131361818;
+			// aapt resource value: 0x7f0a0023
+			public const int listMode = 2131361827;
 			
 			// aapt resource value: 0x7f0a003f
 			public const int list_item = 2131361855;
@@ -2084,62 +2084,62 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0070
 			public const int media_route_volume_slider = 2131361904;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int middle = 2131361832;
+			// aapt resource value: 0x7f0a0031
+			public const int middle = 2131361841;
 			
-			// aapt resource value: 0x7f0a0016
-			public const int mini = 2131361814;
+			// aapt resource value: 0x7f0a001f
+			public const int mini = 2131361823;
 			
-			// aapt resource value: 0x7f0a0025
-			public const int multiply = 2131361829;
+			// aapt resource value: 0x7f0a002b
+			public const int multiply = 2131361835;
 			
-			// aapt resource value: 0x7f0a0029
-			public const int never = 2131361833;
+			// aapt resource value: 0x7f0a0035
+			public const int never = 2131361845;
 			
-			// aapt resource value: 0x7f0a0004
-			public const int none = 2131361796;
+			// aapt resource value: 0x7f0a000e
+			public const int none = 2131361806;
 			
-			// aapt resource value: 0x7f0a0015
-			public const int normal = 2131361813;
+			// aapt resource value: 0x7f0a0020
+			public const int normal = 2131361824;
 			
-			// aapt resource value: 0x7f0a0006
-			public const int parallax = 2131361798;
+			// aapt resource value: 0x7f0a000f
+			public const int parallax = 2131361807;
 			
 			// aapt resource value: 0x7f0a0042
 			public const int parentPanel = 2131361858;
 			
-			// aapt resource value: 0x7f0a0005
-			public const int pin = 2131361797;
+			// aapt resource value: 0x7f0a0010
+			public const int pin = 2131361808;
 			
 			// aapt resource value: 0x7f0a006d
 			public const int play_pause = 2131361901;
 			
-			// aapt resource value: 0x7f0a0034
-			public const int progress_circular = 2131361844;
+			// aapt resource value: 0x7f0a0006
+			public const int progress_circular = 2131361798;
 			
-			// aapt resource value: 0x7f0a0035
-			public const int progress_horizontal = 2131361845;
+			// aapt resource value: 0x7f0a0007
+			public const int progress_horizontal = 2131361799;
 			
 			// aapt resource value: 0x7f0a004f
 			public const int radio = 2131361871;
 			
-			// aapt resource value: 0x7f0a000a
-			public const int right = 2131361802;
+			// aapt resource value: 0x7f0a0018
+			public const int right = 2131361816;
 			
 			// aapt resource value: 0x7f0a0068
 			public const int route_name = 2131361896;
 			
-			// aapt resource value: 0x7f0a0026
-			public const int screen = 2131361830;
+			// aapt resource value: 0x7f0a002c
+			public const int screen = 2131361836;
 			
-			// aapt resource value: 0x7f0a0000
-			public const int scroll = 2131361792;
+			// aapt resource value: 0x7f0a000d
+			public const int scroll = 2131361805;
 			
 			// aapt resource value: 0x7f0a0047
 			public const int scrollView = 2131361863;
 			
-			// aapt resource value: 0x7f0a0017
-			public const int scrollable = 2131361815;
+			// aapt resource value: 0x7f0a0022
+			public const int scrollable = 2131361826;
 			
 			// aapt resource value: 0x7f0a0059
 			public const int search_badge = 2131361881;
@@ -2180,14 +2180,14 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a004e
 			public const int shortcut = 2131361870;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int showCustom = 2131361824;
+			// aapt resource value: 0x7f0a0027
+			public const int showCustom = 2131361831;
 			
-			// aapt resource value: 0x7f0a001d
-			public const int showHome = 2131361821;
+			// aapt resource value: 0x7f0a0028
+			public const int showHome = 2131361832;
 			
-			// aapt resource value: 0x7f0a001f
-			public const int showTitle = 2131361823;
+			// aapt resource value: 0x7f0a0029
+			public const int showTitle = 2131361833;
 			
 			// aapt resource value: 0x7f0a0065
 			public const int snackbar_action = 2131361893;
@@ -2195,20 +2195,20 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0064
 			public const int snackbar_text = 2131361892;
 			
-			// aapt resource value: 0x7f0a0036
-			public const int split_action_bar = 2131361846;
+			// aapt resource value: 0x7f0a0008
+			public const int split_action_bar = 2131361800;
 			
-			// aapt resource value: 0x7f0a0024
-			public const int src_atop = 2131361828;
+			// aapt resource value: 0x7f0a002d
+			public const int src_atop = 2131361837;
 			
-			// aapt resource value: 0x7f0a0023
-			public const int src_in = 2131361827;
+			// aapt resource value: 0x7f0a002e
+			public const int src_in = 2131361838;
 			
-			// aapt resource value: 0x7f0a0022
-			public const int src_over = 2131361826;
+			// aapt resource value: 0x7f0a002f
+			public const int src_over = 2131361839;
 			
-			// aapt resource value: 0x7f0a000f
-			public const int start = 2131361807;
+			// aapt resource value: 0x7f0a0019
+			public const int start = 2131361817;
 			
 			// aapt resource value: 0x7f0a0076
 			public const int status_bar_latest_event_content = 2131361910;
@@ -2222,8 +2222,8 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a006e
 			public const int subtitle = 2131361902;
 			
-			// aapt resource value: 0x7f0a001b
-			public const int tabMode = 2131361819;
+			// aapt resource value: 0x7f0a0024
+			public const int tabMode = 2131361828;
 			
 			// aapt resource value: 0x7f0a007e
 			public const int text = 2131361918;
@@ -2246,26 +2246,26 @@ namespace TDCArcTouch.Droid
 			// aapt resource value: 0x7f0a0044
 			public const int title_template = 2131361860;
 			
-			// aapt resource value: 0x7f0a0007
-			public const int top = 2131361799;
+			// aapt resource value: 0x7f0a001a
+			public const int top = 2131361818;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int topPanel = 2131361859;
 			
+			// aapt resource value: 0x7f0a0009
+			public const int up = 2131361801;
+			
+			// aapt resource value: 0x7f0a002a
+			public const int useLogo = 2131361834;
+			
+			// aapt resource value: 0x7f0a0000
+			public const int view_offset_helper = 2131361792;
+			
+			// aapt resource value: 0x7f0a0036
+			public const int withText = 2131361846;
+			
 			// aapt resource value: 0x7f0a0037
-			public const int up = 2131361847;
-			
-			// aapt resource value: 0x7f0a001c
-			public const int useLogo = 2131361820;
-			
-			// aapt resource value: 0x7f0a0019
-			public const int view_offset_helper = 2131361817;
-			
-			// aapt resource value: 0x7f0a002c
-			public const int withText = 2131361836;
-			
-			// aapt resource value: 0x7f0a002e
-			public const int wrap_content = 2131361838;
+			public const int wrap_content = 2131361847;
 			
 			static Id()
 			{

@@ -104,12 +104,18 @@ namespace TDCArcTouch
             }
         }
 
+        protected virtual void GoToNextPage()
+        {
+            (App.Current as App).NavigateTo<CustomPage>();
+        }
+
         private async void NextButtonTapped()
         {
             var avatarSelected = MommSelected || KazumiSelected || DefaultSelected;
             if(avatarSelected && !string.IsNullOrWhiteSpace(Name))
             {
                 await (App.Current as App).DisplayAlert("Foi.");
+                GoToNextPage();
             }
             else
             {
