@@ -7,6 +7,7 @@
             <!--Colors-->
             <Color x:Key="Orange">#FF8300</Color>
             <Color x:Key="Grey">#55565A</Color>
+            <Color x:Key="LightGrey">#F6F6F6</Color>
              
             <!--Images-->
             <FileImageSource x:Key="mommAvatar" File="momm"/>
