@@ -24,7 +24,7 @@
 		</ResourceDictionary>
 	</custom:BaseContentPage.Resources>
 	<AbsoluteLayout>
-		<StackLayout Orientation="{StaticResource stackOrientation}"
+		<StackLayout Orientation="Vertical"
 			Padding="30, 30, 30, 10"
 			Spacing="50"
 			VerticalOptions="FillAndExpand"
@@ -38,64 +38,56 @@
 				HorizontalOptions="Center"
 				VerticalOptions="Center"/>
 
-			<StackLayout 
-				Orientation="Vertical"
-				Spacing="20"
-				HorizontalOptions="FillAndExpand"
-				VerticalOptions="FillAndExpand">
-
-				<custom:PressedView
-					Command="{Binding ShowColorPickerCommand}"
-					BackgroundColor="{StaticResource Orange}"
-					HeightRequest="50"
-					WidthRequest="200"
-					HorizontalOptions="Center" >
-
-					<Label 
-						Text="Selecionar Cor" 
-						InputTransparent="true" 
-						HorizontalTextAlignment="Center" 
-						VerticalTextAlignment="Center"
-						TextColor="Black" />
-
-				</custom:PressedView>
-
-				<Entry Text="{Binding Name}"
-					VerticalOptions="CenterAndExpand"
-					Placeholder="Entre seu nome" />
-
-				<custom:CustomWebView
-					Source="{Binding Html}"
-					HeightRequest="30"
-					WidthRequest="1000"
-					HorizontalOptions="CenterAndExpand"
-					VerticalOptions="EndAndExpand" />
-
-				<custom:PressedView
-					Command="{Binding NextButtonCommand}"
-					BackgroundColor="{StaticResource Orange}"
-					HeightRequest="50"
-					WidthRequest="200"
-					HorizontalOptions="Center" >
-
-					<Label 
-						Text="Next" 
-						InputTransparent="true" 
-						HorizontalTextAlignment="Center" 
-						VerticalTextAlignment="Center"
-						TextColor="Black" />
-
-				</custom:PressedView>
+			<custom:PressedView
+				Command="{Binding ShowColorPickerCommand}"
+				BackgroundColor="{StaticResource Orange}"
+				HeightRequest="50"
+				WidthRequest="200"
+				HorizontalOptions="Center" >
 
 				<Label 
-					Text="{Binding AppVersion}" 
+					Text="Selecionar Cor" 
 					InputTransparent="true" 
-					HorizontalOptions="EndAndExpand" 
+					HorizontalTextAlignment="Center" 
 					VerticalTextAlignment="Center"
-					FontSize="Small"
 					TextColor="Black" />
 
-			</StackLayout>
+			</custom:PressedView>
+
+			<Entry Text="{Binding Name}"
+				VerticalOptions="CenterAndExpand"
+				Placeholder="Entre seu nome" />
+
+			<custom:CustomWebView
+				Source="{Binding Html}"
+				HeightRequest="30"
+				WidthRequest="1000"
+				HorizontalOptions="CenterAndExpand"
+				VerticalOptions="EndAndExpand" />
+
+			<custom:PressedView
+				Command="{Binding NextButtonCommand}"
+				BackgroundColor="{StaticResource Orange}"
+				HeightRequest="50"
+				WidthRequest="200"
+				HorizontalOptions="Center" >
+
+				<Label 
+					Text="Next" 
+					InputTransparent="true" 
+					HorizontalTextAlignment="Center" 
+					VerticalTextAlignment="Center"
+					TextColor="Black" />
+
+			</custom:PressedView>
+
+			<Label 
+				Text="{Binding AppVersion}" 
+				InputTransparent="true" 
+				HorizontalOptions="EndAndExpand" 
+				VerticalTextAlignment="Center"
+				FontSize="Small"
+				TextColor="Black" />
 
 		</StackLayout>
 		<ContentView IsVisible="{Binding IsLoading}"
