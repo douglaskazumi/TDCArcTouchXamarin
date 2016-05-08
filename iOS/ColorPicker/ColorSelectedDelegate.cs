@@ -19,14 +19,16 @@ namespace TDCArcTouch.iOS
 
 		public override void ColorPickerControllerDidFinish(InfColorPickerController controller)
 		{
-			nfloat red;
-			nfloat green;
-			nfloat blue;
-			nfloat alpha;
-			controller.ResultColor.GetRGBA(out red, out green, out blue, out alpha);
+			nfloat red = 0;
+			nfloat green = 0;
+			nfloat blue = 0;
+			nfloat alpha = 1;
+            if (controller.ResultColor != null)
+            {
+                controller.ResultColor.GetRGBA(out red, out green, out blue, out alpha);
+            }
 
-			Color color = new Color(red, green, blue, alpha);
-
+            Color color = new Color(red, green, blue, alpha);
 			parent.DismissViewController(false, () =>
 				{
 					MessagingCenter.Send<App, Color>(((App)App.Current), Messages.COLOR_PICKED, color);

@@ -8,8 +8,8 @@ namespace TDCArcTouch
     public class AdvancedPageModel : CustomPageModel
     {
         private bool selected;
-        private Color borderColor = Color.FromHex("55565A");
-        private string avatarSource = "camera";
+        private Color borderColor = Colors.GREY;
+        private string avatarSource = Images.CAMERA;
         private IColorPicker colorPicker;
 
         public AdvancedPageModel() : base()
@@ -103,7 +103,8 @@ namespace TDCArcTouch
 
         private async void OpenGallery()
         {
-            await (App.Current as App).DisplayAlert("Camera");
+            var selectedPicture = await DependencyService.Get<IMedia>().FromGallery();
+            AvatarSource = selectedPicture;
         }
 
         private void ShowColorPickerCommandTapped()
