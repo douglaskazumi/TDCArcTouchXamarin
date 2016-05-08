@@ -125,7 +125,21 @@ namespace TDCArcTouch.iOS
                 picker.DismissViewController(true, onDismiss);
                 picker.Dispose();
             }
-        }
+		}
+
+		public override void Canceled(UIImagePickerController picker)
+		{
+			Action onDismiss = () => task.TrySetResult("");
+			if (viewController == null)
+			{
+				onDismiss();
+			}
+			else
+			{
+				picker.DismissViewController(true, onDismiss);
+				picker.Dispose();
+			}
+		}
 
         private string GetPictureMediaFile(NSDictionary info)
         {
