@@ -25,7 +25,7 @@
 	</custom:BaseContentPage.Resources>
 	<AbsoluteLayout>
 		<StackLayout Orientation="{StaticResource stackOrientation}"
-			Padding="30"
+			Padding="30, 30, 30, 10"
 			Spacing="50"
 			VerticalOptions="FillAndExpand"
 			AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -86,6 +86,14 @@
 						TextColor="Black" />
 
 				</custom:PressedView>
+
+				<Label 
+					Text="{Binding AppVersion}" 
+					InputTransparent="true" 
+					HorizontalOptions="EndAndExpand" 
+					VerticalTextAlignment="Center"
+					FontSize="Small"
+					TextColor="Black" />
 
 			</StackLayout>
 

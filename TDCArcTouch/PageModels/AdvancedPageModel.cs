@@ -9,7 +9,8 @@ namespace TDCArcTouch
     {
         private bool selected;
         private Color borderColor = Colors.GREY;
-        private string avatarSource = Images.CAMERA;
+		private string avatarSource = Images.CAMERA;
+		private string appVersion;
         private IColorPicker colorPicker;
 
         public AdvancedPageModel() : base()
@@ -18,7 +19,9 @@ namespace TDCArcTouch
             ShowColorPickerCommand = new Command(ShowColorPickerCommandTapped);
 
             BorderColor = Colors.ORANGE;
-            this.colorPicker = DependencyService.Get<IColorPicker>();
+			this.colorPicker = DependencyService.Get<IColorPicker>();
+
+			AppVersion = DependencyService.Get<IEnvironment>().GetAppVersion();
         }
 
         public ICommand OpenGalleryCommand { get; set; }
@@ -75,7 +78,23 @@ namespace TDCArcTouch
                     RaisePropertyChanged();
                 }
             }
-        }
+		}
+
+		public string AppVersion
+		{
+			get
+			{
+				return this.appVersion;
+			}
+			set
+			{
+				if (this.appVersion != value)
+				{
+					this.appVersion = value;
+					RaisePropertyChanged();
+				}
+			}
+		}
 
         protected override void GoToNextPage()
         {
