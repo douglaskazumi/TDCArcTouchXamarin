@@ -129,6 +129,7 @@
     <BundleResource Include="Resources\kazumi.jpg" />
     <BundleResource Include="Resources\momm.png" />
     <BundleResource Include="Resources\checkmark.png" />
+    <BundleResource Include="Resources\camera.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

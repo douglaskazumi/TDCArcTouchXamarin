@@ -98,7 +98,7 @@ namespace TDCArcTouch
 
         protected override void GoToNextPage()
         {
-            (App.Current as App).NavigateTo<StockPage>();
+            (App.Current as App).NavigateTo<AdvancedPage>();
         }
 
         private async Task LoadData()

@@ -41,6 +41,11 @@ namespace TDCArcTouch
 
         public void OnTapped(object sender, EventArgs e)
         {
+            if (!IsEnabled)
+            {
+                return;
+            }
+
             SetSelection(!Selected);
         }
 
