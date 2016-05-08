@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<custom:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:custom="clr-namespace:TDCArcTouch;assembly=TDCArcTouch"
 	BackgroundColor="{StaticResource LightGrey}"
 	x:Class="TDCArcTouch.CustomPage">
 
-	<ContentPage.Resources>
+	<custom:BaseContentPage.Resources>
 		<ResourceDictionary>
 		  <OnIdiom x:Key="stackOrientation"
 		              x:TypeArguments="StackOrientation"
@@ -17,7 +17,7 @@
 		              Phone="Horizontal"
 		              Tablet="Vertical" />
 		</ResourceDictionary>
-	</ContentPage.Resources>
+	</custom:BaseContentPage.Resources>
 
 	<StackLayout Orientation="{StaticResource stackOrientation}"
 		Padding="30"
@@ -35,6 +35,22 @@
 			Spacing="20"
 			HorizontalOptions="FillAndExpand"
 			VerticalOptions="FillAndExpand">
+
+			<custom:PressedView
+				Command="{Binding ShowColorPickerCommand}"
+				BackgroundColor="{Binding Color}"
+				HeightRequest="50"
+				WidthRequest="200"
+				HorizontalOptions="Center" >
+
+				<Label 
+					Text="Selecionar Cor" 
+					InputTransparent="true" 
+					HorizontalTextAlignment="Center" 
+					VerticalTextAlignment="Center"
+					TextColor="Black" />
+
+			</custom:PressedView>
 
 			<Entry Text="{Binding Name}"
 				VerticalOptions="Start"
@@ -66,4 +82,4 @@
 		</StackLayout>
 
 	</StackLayout>
-</ContentPage>
+</custom:BaseContentPage>

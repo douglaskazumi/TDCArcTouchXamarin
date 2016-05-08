@@ -1,20 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="StockPageModel.cs" company="ArcTouch LLC">
-//   Copyright 2016 ArcTouch LLC.
-//   All rights reserved.
-//
-//   This file, its contents, concepts, methods, behavior, and operation
-//   (collectively the "Software") are protected by trade secret, patent,
-//   and copyright laws. The use of the Software is governed by a license
-//   agreement. Disclosure of the Software to third parties, in any form,
-//   in whole or in part, is expressly prohibited except as authorized by
-//   the license agreement.
-// </copyright>
-// <summary>
-//   Defines the StockPageModel type.
-// </summary>
-//  --------------------------------------------------------------------------------------------------------------------
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -28,11 +12,16 @@ namespace TDCArcTouch
         private bool kazumiSelected;
 		private string name;
 		private HtmlWebViewSource html;
+		private IColorPicker colorPicker;
+		private Color color;
 
 		public CustomPageModel()
 		{
 			NextButtonCommand = new Command(NextButtonTapped);
-			TaCButtonCommand = new Command(TaCButtonTapped);
+			ShowColorPickerCommand = new Command(ShowColorPickerCommandTapped);
+
+			Color = Colors.ORANGE;
+			colorPicker = DependencyService.Get<IColorPicker>();
 
 			Html = new HtmlWebViewSource()
 				{ 
@@ -45,11 +34,30 @@ namespace TDCArcTouch
 		                    </body>
 		                </html>"
 				};
-        }
+		}
+
+		protected internal override void OnAppearing()
+		{
+			base.OnAppearing();
+
+			MessagingCenter.Subscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED, OnColorPicked);
+		}
+
+		protected internal override void OnDisappearing()
+		{
+			MessagingCenter.Unsubscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED);
+
+			base.OnDisappearing();
+		}
+
+		private void OnColorPicked(object sender, Color color)
+		{
+			Color = color;
+		}
 
 		public ICommand NextButtonCommand { get; set; }
 
-		public ICommand TaCButtonCommand { get; set; }
+		public ICommand ShowColorPickerCommand { get; set; }
         
         public bool MommSelected
         {
@@ -149,6 +157,22 @@ namespace TDCArcTouch
 			}
 		}
 
+		public Color Color
+		{
+			get
+			{
+				return this.color;
+			}
+			set
+			{
+				if (this.color != value)
+				{
+					this.color = value;
+					RaisePropertyChanged();
+				}
+			}
+		}
+
         private async void NextButtonTapped()
         {
             var avatarSelected = MommSelected || KazumiSelected || DefaultSelected;
@@ -162,9 +186,9 @@ namespace TDCArcTouch
             }
 		}
 
-		private void TaCButtonTapped()
+		private void ShowColorPickerCommandTapped()
 		{
-			Device.OpenUri(new Uri("http://www.arctouch.com"));
+			colorPicker.Show();
 		}
     }
 }

@@ -1,21 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="BasePageModel.cs" company="ArcTouch LLC">
-//   Copyright 2016 ArcTouch LLC.
-//   All rights reserved.
-//
-//   This file, its contents, concepts, methods, behavior, and operation
-//   (collectively the "Software") are protected by trade secret, patent,
-//   and copyright laws. The use of the Software is governed by a license
-//   agreement. Disclosure of the Software to third parties, in any form,
-//   in whole or in part, is expressly prohibited except as authorized by
-//   the license agreement.
-// </copyright>
-// <summary>
-//   Defines the BasePageModel type.
-// </summary>
-//  --------------------------------------------------------------------------------------------------------------------
-using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace TDCArcTouch
@@ -31,7 +14,15 @@ namespace TDCArcTouch
             {
                 handler(this, new PropertyChangedEventArgs(fieldName));
             } 
-        }
+		}
+
+		protected internal virtual void OnAppearing()
+		{
+		}
+
+		protected internal virtual void OnDisappearing()
+		{
+		}
     }
 }
 
