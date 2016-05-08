@@ -41,12 +41,15 @@ namespace TDCArcTouch.iOS
 
 			CircleImage image = (CircleImage)sender;
 
-			if (e.PropertyName == CircleImage.BorderColorProperty.PropertyName
-				|| e.PropertyName == CircleImage.BorderWidthProperty.PropertyName
+			if (e.PropertyName == CircleImage.BorderWidthProperty.PropertyName
 				|| e.PropertyName == CircleImage.SourceProperty.PropertyName)
 			{
 				UpdateCircleImage(image);
 			}
+            else if(e.PropertyName == CircleImage.BorderColorProperty.PropertyName)
+            {
+                UpdateBorderColor();
+            }
 		}
 
 		private async void UpdateCircleImage(CircleImage image)
@@ -61,6 +64,12 @@ namespace TDCArcTouch.iOS
 			circleImageView.ClipsToBounds = true;
 			SetNativeControl(circleImageView);
 		}
+
+        private void UpdateBorderColor()
+        {
+            var image = Control as UIImageView;
+            image.Layer.BorderColor = this.Element.BorderColor.ToCGColor();
+        }
 
 		private Task<UIImage> GetUIImageFromImageSource(ImageSource imageSource)
 		{

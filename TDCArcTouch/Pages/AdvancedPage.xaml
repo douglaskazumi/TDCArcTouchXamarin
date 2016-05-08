@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <custom:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:custom="clr-namespace:TDCArcTouch;assembly=TDCArcTouch"
 	BackgroundColor="{StaticResource LightGrey}"
-	x:Class="TDCArcTouch.CustomPage">
+	x:Class="TDCArcTouch.AdvancedPage">
 
 	<custom:BaseContentPage.Resources>
 		<ResourceDictionary>
@@ -25,36 +25,40 @@
 	</custom:BaseContentPage.Resources>
 	<AbsoluteLayout>
 		<StackLayout Orientation="{StaticResource stackOrientation}"
-			Padding="30"
+			Padding="30, 30, 30, 10"
 			Spacing="50"
 			VerticalOptions="FillAndExpand"
 			AbsoluteLayout.LayoutBounds="0,0,1,1"
 			AbsoluteLayout.LayoutFlags="All">
 
-			<StackLayout Orientation="{StaticResource avatarOrientation}"
-				Padding="{StaticResource avatarPadding}">
-				<ContentView VerticalOptions="FillAndExpand">
-					<custom:CircleAvatar Source="{StaticResource mommAvatar}" 
-						Selected="{Binding MommSelected}" 
-						VerticalOptions="Center"/>
-				</ContentView>
-				<ContentView VerticalOptions="FillAndExpand">
-					<custom:CircleAvatar Source="{StaticResource defaultAvatar}" 
-						Selected="{Binding DefaultSelected}" 
-						VerticalOptions="Center"/>
-				</ContentView>
-				<ContentView VerticalOptions="FillAndExpand">
-					<custom:CircleAvatar Source="{StaticResource kazumiAvatar}" 
-						Selected="{Binding KazumiSelected}" 
-						VerticalOptions="Center"/>
-				</ContentView>
-			</StackLayout>
+			<custom:CircleAvatar Source="{Binding AvatarSource}" 
+				Command="{Binding OpenGalleryCommand}"
+				BorderColor="{Binding BorderColor}"
+				Selected="{Binding Selected}"
+				HorizontalOptions="Center"
+				VerticalOptions="Center"/>
 
 			<StackLayout 
 				Orientation="Vertical"
 				Spacing="20"
 				HorizontalOptions="FillAndExpand"
 				VerticalOptions="FillAndExpand">
+
+				<custom:PressedView
+					Command="{Binding ShowColorPickerCommand}"
+					BackgroundColor="{StaticResource Orange}"
+					HeightRequest="50"
+					WidthRequest="200"
+					HorizontalOptions="Center" >
+
+					<Label 
+						Text="Selecionar Cor" 
+						InputTransparent="true" 
+						HorizontalTextAlignment="Center" 
+						VerticalTextAlignment="Center"
+						TextColor="Black" />
+
+				</custom:PressedView>
 
 				<Entry Text="{Binding Name}"
 					VerticalOptions="CenterAndExpand"
@@ -82,6 +86,14 @@
 						TextColor="Black" />
 
 				</custom:PressedView>
+
+				<Label 
+					Text="{Binding AppVersion}" 
+					InputTransparent="true" 
+					HorizontalOptions="EndAndExpand" 
+					VerticalTextAlignment="Center"
+					FontSize="Small"
+					TextColor="Black" />
 
 			</StackLayout>
 

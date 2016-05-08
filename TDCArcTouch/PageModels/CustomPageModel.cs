@@ -1,195 +1,88 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace TDCArcTouch
 {
-	public class CustomPageModel : BasePageModel
+    public class CustomPageModel : StockPageModel
     {
-        private bool mommSelected;
-        private bool defaultSelected;
-        private bool kazumiSelected;
-		private string name;
-		private HtmlWebViewSource html;
-		private IColorPicker colorPicker;
-		private Color color;
+        private bool isLoading = true;
+        private HtmlWebViewSource html;
 
-		public CustomPageModel()
-		{
-			NextButtonCommand = new Command(NextButtonTapped);
-			ShowColorPickerCommand = new Command(ShowColorPickerCommandTapped);
+        public CustomPageModel() : base()
+        {
+        }
 
-			Color = Colors.ORANGE;
-			colorPicker = DependencyService.Get<IColorPicker>();
-
-			Html = new HtmlWebViewSource()
-				{ 
-					Html = @"
-		                <html>
-		                <head>
-		                </head>
-		                    <body>
-		                        Clique <a href='http://www.arctouch.com/'>aqui</a> para abrir os Termos e Condições
-		                    </body>
-		                </html>"
-				};
-		}
-
-		protected internal override void OnAppearing()
+		protected internal override async void OnAppearing()
 		{
 			base.OnAppearing();
 
-			MessagingCenter.Subscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED, OnColorPicked);
+			await LoadData();
 		}
 
-		protected internal override void OnDisappearing()
-		{
-			MessagingCenter.Unsubscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED);
-
-			base.OnDisappearing();
-		}
-
-		private void OnColorPicked(object sender, Color color)
-		{
-			Color = color;
-		}
-
-		public ICommand NextButtonCommand { get; set; }
-
-		public ICommand ShowColorPickerCommand { get; set; }
-        
-        public bool MommSelected
+        public bool IsLoading
         {
             get
-            {
-                return this.mommSelected;
+            { 
+                return this.isLoading; 
             }
             set
             {
-                if (this.mommSelected != value)
+                if (this.isLoading != value)
                 {
-                    this.mommSelected = value;
+                    this.isLoading = value;
                     RaisePropertyChanged();
-                    
-                    if(MommSelected)
-                    {
-                        KazumiSelected = false;
-                        DefaultSelected = false;
-                    }
                 }
             }
         }
 
-        public bool DefaultSelected
+        public HtmlWebViewSource Html
         {
             get
             {
-                return this.defaultSelected;
+                return this.html;
             }
             set
             {
-                if (this.defaultSelected != value)
+                if (this.html != value)
                 {
-                    this.defaultSelected = value;
+                    this.html = value;
                     RaisePropertyChanged();
-
-                    if(DefaultSelected)
-                    {
-                        KazumiSelected = false;
-                        MommSelected = false;
-                    }
                 }
             }
         }
 
-        public bool KazumiSelected
+        protected override void GoToNextPage()
         {
-            get
-            {
-                return this.kazumiSelected;
-            }
-            set
-            {
-                if (this.kazumiSelected != value)
-                {
-                    this.kazumiSelected = value;
-                    RaisePropertyChanged();
-
-                    if(KazumiSelected)
-                    {
-                        MommSelected = false;
-                        DefaultSelected = false;
-                    }
-                }
-            }
+            (App.Current as App).NavigateTo<AdvancedPage>();
         }
 
-        public string Name
+        private async Task LoadData()
         {
-            get
-            {
-                return this.name;
-            }
-            set
-            {
-                if (this.name != value)
-                {
-                    this.name = value;
-                    RaisePropertyChanged();
-                }
-            }
-		}
+            await Task.Delay(1500);
 
-		public HtmlWebViewSource Html
-		{
-			get
-			{
-				return this.html;
-			}
-			set
-			{
-				if (this.html != value)
-				{
-					this.html = value;
-					RaisePropertyChanged();
-				}
-			}
-		}
+            Html = new HtmlWebViewSource()
+            { 
+                Html = @"
+                        <html>
+                        <head>
+                            <style type=""text/css"">
+                                body { 
+                                    font-family: ""Arial Black"", Gadget, sans-serif; 
+                                    font-size: 90%; 
+                                    background-color: #F6F6F6;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            Clique <a href='http://www.arctouch.com/'>aqui</a> para abrir os Termos e Condições
+                        </body>
+                        </html>"
+            };
 
-		public Color Color
-		{
-			get
-			{
-				return this.color;
-			}
-			set
-			{
-				if (this.color != value)
-				{
-					this.color = value;
-					RaisePropertyChanged();
-				}
-			}
-		}
-
-        private async void NextButtonTapped()
-        {
-            var avatarSelected = MommSelected || KazumiSelected || DefaultSelected;
-            if(avatarSelected && !string.IsNullOrWhiteSpace(Name))
-            {
-                await (App.Current as App).DisplayAlert("Foi.");
-            }
-            else
-            {
-                await (App.Current as App).DisplayAlert("Selecione um avatar e informe seu nome.");
-            }
-		}
-
-		private void ShowColorPickerCommandTapped()
-		{
-			colorPicker.Show();
-		}
+            IsLoading = false;
+        }
     }
 }
 

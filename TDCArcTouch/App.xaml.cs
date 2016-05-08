@@ -17,13 +17,19 @@ namespace TDCArcTouch
             var menu = new MenuPage();
             menu.ListView.ItemSelected += MenuItemSelected;
             this.masterDetail.Master = menu;
-            this.masterDetail.Detail = new NavigationPage(new StockPage());
+			this.masterDetail.Detail = new NavigationPage(new StockPage());
 			MainPage = this.masterDetail;
 		}
 
         public async Task DisplayAlert(string message, string title = "TDC ArcTouch", string cancel = "OK")
         {
             await masterDetail.DisplayAlert(title,message,cancel);
+        }
+
+        public void NavigateTo<T>()
+        {
+            var newPage = (Page)Activator.CreateInstance(typeof(T));
+            this.masterDetail.Detail = new NavigationPage(newPage);
         }
 
         protected override void OnStart()

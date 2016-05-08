@@ -8,7 +8,7 @@
 		</ResourceDictionary>
 	</ContentView.Resources>
 
-	<AbsoluteLayout BackgroundColor="Transparent">
+	<AbsoluteLayout>
 		<AbsoluteLayout.GestureRecognizers>
 			<TapGestureRecognizer Tapped="OnTapped" />
 		</AbsoluteLayout.GestureRecognizers>
