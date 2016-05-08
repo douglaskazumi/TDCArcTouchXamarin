@@ -9,39 +9,11 @@ namespace TDCArcTouch
     {
         private bool isLoading = true;
         private HtmlWebViewSource html;
-		private IColorPicker colorPicker;
-		private Color color;
 
         public CustomPageModel() : base()
         {
-			ShowColorPickerCommand = new Command(ShowColorPickerCommandTapped);
-
-			Color = Colors.ORANGE;
-			colorPicker = DependencyService.Get<IColorPicker>();
-
             LoadData();
         }
-
-		protected internal override void OnAppearing()
-		{
-			base.OnAppearing();
-
-			MessagingCenter.Subscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED, OnColorPicked);
-		}
-
-		protected internal override void OnDisappearing()
-		{
-			MessagingCenter.Unsubscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED);
-
-			base.OnDisappearing();
-		}
-
-		private void OnColorPicked(object sender, Color color)
-		{
-			Color = color;
-		}
-
-		public ICommand ShowColorPickerCommand { get; set; }
 
         public bool IsLoading
         {
@@ -58,27 +30,6 @@ namespace TDCArcTouch
                 }
             }
         }
-
-		private void ShowColorPickerCommandTapped()
-		{
-			colorPicker.Show();
-		}
-
-		public Color Color
-		{
-			get
-			{
-				return this.color;
-			}
-			set
-			{
-				if (this.color != value)
-				{
-					this.color = value;
-					RaisePropertyChanged();
-				}
-			}
-		}
 
         public HtmlWebViewSource Html
         {
@@ -110,10 +61,17 @@ namespace TDCArcTouch
                 Html = @"
                         <html>
                         <head>
+                            <style type=""text/css"">
+                                body { 
+                                    font-family: ""Arial Black"", Gadget, sans-serif; 
+                                    font-size: 90%; 
+                                    background-color: #F6F6F6;
+                                }
+                            </style>
                         </head>
-                            <body>
-                                Clique <a href='http://www.arctouch.com/'>aqui</a> para abrir os Termos e Condições
-                            </body>
+                        <body>
+                            Clique <a href='http://www.arctouch.com/'>aqui</a> para abrir os Termos e Condições
+                        </body>
                         </html>"
             };
 

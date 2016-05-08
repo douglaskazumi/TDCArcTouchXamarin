@@ -10,13 +10,20 @@ namespace TDCArcTouch
         private bool selected;
         private Color borderColor = Color.FromHex("55565A");
         private string avatarSource = "camera";
+        private IColorPicker colorPicker;
 
         public AdvancedPageModel() : base()
         {
             OpenGalleryCommand = new Command(OpenGallery);
+            ShowColorPickerCommand = new Command(ShowColorPickerCommandTapped);
+
+            BorderColor = Colors.ORANGE;
+            this.colorPicker = DependencyService.Get<IColorPicker>();
         }
 
         public ICommand OpenGalleryCommand { get; set; }
+
+        public ICommand ShowColorPickerCommand { get; set; }
          
         public bool Selected
         {
@@ -75,9 +82,33 @@ namespace TDCArcTouch
             (App.Current as App).NavigateTo<StockPage>();
         }
 
+        protected internal override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            MessagingCenter.Subscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED, OnColorPicked);
+        }
+
+        protected internal override void OnDisappearing()
+        {
+            MessagingCenter.Unsubscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED);
+
+            base.OnDisappearing();
+        }
+
+        private void OnColorPicked(object sender, Color color)
+        {
+            BorderColor = color;
+        }
+
         private async void OpenGallery()
         {
             await (App.Current as App).DisplayAlert("Camera");
+        }
+
+        private void ShowColorPickerCommandTapped()
+        {
+            this.colorPicker.Show();
         }
     }
 }

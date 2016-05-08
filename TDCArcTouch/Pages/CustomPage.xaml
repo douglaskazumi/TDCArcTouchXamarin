@@ -56,22 +56,6 @@
 				HorizontalOptions="FillAndExpand"
 				VerticalOptions="FillAndExpand">
 
-			<custom:PressedView
-				Command="{Binding ShowColorPickerCommand}"
-				BackgroundColor="{Binding Color}"
-				HeightRequest="50"
-				WidthRequest="200"
-				HorizontalOptions="Center" >
-
-				<Label 
-					Text="Selecionar Cor" 
-					InputTransparent="true" 
-					HorizontalTextAlignment="Center" 
-					VerticalTextAlignment="Center"
-					TextColor="Black" />
-
-			</custom:PressedView>
-
 				<Entry Text="{Binding Name}"
 					VerticalOptions="CenterAndExpand"
 					Placeholder="Entre seu nome" />
@@ -114,4 +98,4 @@
 				IsVisible="{Binding IsLoading}" />
 		</ContentView>
 	</AbsoluteLayout>
-</ContentPage>
+</custom:BaseContentPage>

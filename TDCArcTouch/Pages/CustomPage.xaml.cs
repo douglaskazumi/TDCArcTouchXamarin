@@ -10,8 +10,8 @@ namespace TDCArcTouch
 		public CustomPage()
 		{
 			InitializeComponent();
-			basePageModel = new CustomPageModel();
-			BindingContext = basePageModel;
+			this.basePageModel = new CustomPageModel();
+			BindingContext = this.basePageModel;
 		}
 	}
 }
