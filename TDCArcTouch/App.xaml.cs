@@ -34,8 +34,8 @@ namespace TDCArcTouch
             menu.ListView.ItemSelected += MenuItemSelected;
             this.masterDetail.Master = menu;
             this.masterDetail.Detail = new NavigationPage(new StockPage());
-            MainPage = this.masterDetail;
-        }
+			MainPage = this.masterDetail;
+		}
 
         public async Task DisplayAlert(string message, string title = "TDC ArcTouch", string cancel = "OK")
         {

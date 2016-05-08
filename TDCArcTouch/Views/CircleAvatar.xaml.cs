@@ -63,7 +63,7 @@ namespace TDCArcTouch
         public void SetSelection(bool selected)
         {
             Selected = selected;
-			this.avatar.BorderColor = Selected ? Color.FromHex("FF8300") : Color.Gray;
+			this.avatar.BorderColor = Selected ? Colors.ORANGE : Color.Gray;
         }
 
         public void SetSource(string source)

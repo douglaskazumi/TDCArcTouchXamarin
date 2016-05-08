@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDCArcTouch.iOS", "iOS\TDCA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDCArcTouch.Droid", "Droid\TDCArcTouch.Droid.csproj", "{2F6D2B5F-1645-4498-86DC-DC9DF1361417}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfColorPickerBinding", "InfColorPickerBinding\InfColorPickerBinding.csproj", "{B73917D6-5393-45BB-BD81-F68C3811FA1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{2F6D2B5F-1645-4498-86DC-DC9DF1361417}.Release|iPhone.Build.0 = Release|Any CPU
 		{2F6D2B5F-1645-4498-86DC-DC9DF1361417}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{2F6D2B5F-1645-4498-86DC-DC9DF1361417}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Release|iPhone.Build.0 = Release|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{B73917D6-5393-45BB-BD81-F68C3811FA1C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{D33B51C1-E3B8-4CB1-99E5-79FA397B9803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D33B51C1-E3B8-4CB1-99E5-79FA397B9803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D33B51C1-E3B8-4CB1-99E5-79FA397B9803}.Debug|iPhone.ActiveCfg = Debug|Any CPU

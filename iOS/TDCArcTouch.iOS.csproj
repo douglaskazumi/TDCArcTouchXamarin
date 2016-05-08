@@ -97,12 +97,17 @@
       <Project>{D33B51C1-E3B8-4CB1-99E5-79FA397B9803}</Project>
       <Name>TDCArcTouch</Name>
     </ProjectReference>
+    <ProjectReference Include="..\InfColorPickerBinding\InfColorPickerBinding.csproj">
+      <Project>{B73917D6-5393-45BB-BD81-F68C3811FA1C}</Project>
+      <Name>InfColorPickerBinding</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="InfColorPickerView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -114,6 +119,8 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\CircleImageRenderer.cs" />
     <Compile Include="Renderers\PressedViewRenderer.cs" />
+    <Compile Include="Implementations\ColorPicker.cs" />
+    <Compile Include="ColorPicker\ColorSelectedDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.1.0.6529\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.1.0.6529\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -125,5 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="ColorPicker\" />
   </ItemGroup>
 </Project>
