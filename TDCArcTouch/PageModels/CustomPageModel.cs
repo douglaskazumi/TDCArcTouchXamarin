@@ -12,8 +12,14 @@ namespace TDCArcTouch
 
         public CustomPageModel() : base()
         {
-            LoadData();
         }
+
+		protected internal override async void OnAppearing()
+		{
+			base.OnAppearing();
+
+			await LoadData();
+		}
 
         public bool IsLoading
         {

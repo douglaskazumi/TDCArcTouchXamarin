@@ -21,7 +21,7 @@ namespace TDCArcTouch
             }
         );
 
-        public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(CircleAvatar), Color.FromHex("FF8300"), BindingMode.OneWay, null,
+		public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(CircleAvatar), Colors.ORANGE, BindingMode.OneWay, null,
             propertyChanged: (bindable, oldValue, newValue) => {
             var self = bindable as CircleAvatar;
             self.SetBorderColor((Color)newValue);

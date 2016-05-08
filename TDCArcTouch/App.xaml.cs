@@ -17,7 +17,7 @@ namespace TDCArcTouch
             var menu = new MenuPage();
             menu.ListView.ItemSelected += MenuItemSelected;
             this.masterDetail.Master = menu;
-            this.masterDetail.Detail = new NavigationPage(new AdvancedPage());
+			this.masterDetail.Detail = new NavigationPage(new StockPage());
 			MainPage = this.masterDetail;
 		}
 

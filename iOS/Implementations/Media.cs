@@ -1,26 +1,9 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Media.cs" company="ArcTouch LLC">
-//   Copyright 2016 ArcTouch LLC.
-//   All rights reserved.
-//
-//   This file, its contents, concepts, methods, behavior, and operation
-//   (collectively the "Software") are protected by trade secret, patent,
-//   and copyright laws. The use of the Software is governed by a license
-//   agreement. Disclosure of the Software to third parties, in any form,
-//   in whole or in part, is expressly prohibited except as authorized by
-//   the license agreement.
-// </copyright>
-// <summary>
-//   Defines the Media type.
-// </summary>
-//  --------------------------------------------------------------------------------------------------------------------
-using System;
-using System.Threading.Tasks;
-using UIKit;
-using Foundation;
-using AVFoundation;
-using System.Threading;
+﻿using System;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+using Foundation;
+using UIKit;
 
 [assembly: Xamarin.Forms.Dependency(typeof(TDCArcTouch.iOS.Media))]
 namespace TDCArcTouch.iOS
