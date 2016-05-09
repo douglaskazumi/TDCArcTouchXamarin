@@ -16,6 +16,7 @@ namespace TDCArcTouch
 			if (e.Url.StartsWith("http"))
 			{
 				Device.OpenUri(new Uri(e.Url));
+				e.Cancel = true;
 			}
 		}
 	}
