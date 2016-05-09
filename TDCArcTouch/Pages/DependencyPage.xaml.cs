@@ -5,12 +5,12 @@ using Xamarin.Forms;
 
 namespace TDCArcTouch
 {
-    public partial class AdvancedPage : BaseContentPage
+    public partial class DependencyPage : BaseContentPage
 	{
-        public AdvancedPage()
+        public DependencyPage()
 		{
 			InitializeComponent();
-            this.basePageModel = new AdvancedPageModel();
+            this.basePageModel = new DependencyPageModel();
             BindingContext = this.basePageModel;
 		}
 	}

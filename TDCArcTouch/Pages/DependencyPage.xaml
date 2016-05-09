@@ -3,7 +3,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:custom="clr-namespace:TDCArcTouch;assembly=TDCArcTouch"
 	BackgroundColor="{StaticResource LightGrey}"
-	x:Class="TDCArcTouch.AdvancedPage">
+	x:Class="TDCArcTouch.DependencyPage">
 
 	<custom:BaseContentPage.Resources>
 		<ResourceDictionary>
