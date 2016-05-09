@@ -8,6 +8,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using Xamarin.Forms;
+
 namespace TDCArcTouch.Droid
 {
     [Activity(Label = "TDCArcTouch.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -17,7 +19,10 @@ namespace TDCArcTouch.Droid
         {
             base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+			RequestedOrientation = Device.Idiom == TargetIdiom.Tablet ? 
+				ScreenOrientation.Landscape : ScreenOrientation.Portrait;
+
+            Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
         }
