@@ -15,10 +15,6 @@ namespace TDCArcTouch.Droid
 		private bool cancelTouch;
 		private long lastUpTime;
 
-		public PressedViewRenderer()
-		{
-		}
-
 		public override bool OnTouchEvent(global::Android.Views.MotionEvent e)
 		{
 			switch (e.Action)
@@ -51,7 +47,6 @@ namespace TDCArcTouch.Droid
 
 			if (base.Element != null)
 			{
-				//((PressedView)this.Element).IsPressed = true;
 				((PressedView)base.Element).SetPressed(true);
 			}
 
@@ -64,7 +59,6 @@ namespace TDCArcTouch.Droid
 			{
 				if (!this.cancelTouch)
 				{
-					//((PressedView)this.Element).IsPressed = false;
 					((PressedView)base.Element).SetPressed(false);
 					if ((e.EventTime - this.lastUpTime) > MIN_ELAPSED_TIME_MS)
 					{
@@ -82,7 +76,6 @@ namespace TDCArcTouch.Droid
 		{
 			if (base.Element != null)
 			{
-				//((PressedView)this.Element).IsPressed = false;
 				((PressedView)base.Element).SetPressed(false);
 			}
 
@@ -100,7 +93,6 @@ namespace TDCArcTouch.Droid
 					this.cancelTouch = true;
 					if (base.Element != null)
 					{
-						//((PressedView)this.Element).IsPressed = false;
 						((PressedView)base.Element).SetPressed(false);
 					}
 				}

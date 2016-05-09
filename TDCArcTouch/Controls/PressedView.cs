@@ -74,17 +74,12 @@ namespace TDCArcTouch
 			}
 		}
 
-		public virtual async Task SetPressed(bool pressed)
+		public virtual void SetPressed(bool pressed)
 		{
 			Opacity = pressed ? 0.5 : 1.0;
-            if (pressed)
-            {
-                await this.ScaleTo(1.3, 250, Easing.BounceIn);
-                await this.ScaleTo(1.0, 500, Easing.BounceOut);
-            }
 		}
 
-		public void RaiseTapped()
+		public async void RaiseTapped()
 		{
 			if (!IsEnabled)
 			{
@@ -97,6 +92,9 @@ namespace TDCArcTouch
 			{
 				command.Execute(parameter);
 			}
+
+			await this.ScaleTo(1.3, 250, Easing.Linear);
+			await this.ScaleTo(1.0, 500, Easing.Linear);
 
 			OnTapped();
 		}
