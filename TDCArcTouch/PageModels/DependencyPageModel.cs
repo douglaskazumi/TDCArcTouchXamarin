@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace TDCArcTouch
 {
-    public class AdvancedPageModel : CustomPageModel
+    public class DependencyPageModel : CustomPageModel
     {
         private bool selected;
         private Color borderColor = Colors.GREY;
@@ -13,7 +13,7 @@ namespace TDCArcTouch
 		private string appVersion;
         private IColorPicker colorPicker;
 
-        public AdvancedPageModel() : base()
+        public DependencyPageModel() : base()
         {
             OpenGalleryCommand = new Command(OpenGallery);
             ShowColorPickerCommand = new Command(ShowColorPickerCommandTapped);
