@@ -98,19 +98,19 @@ namespace TDCArcTouch
 
         protected override void GoToNextPage()
         {
-            (App.Current as App).NavigateTo<StockPage>();
+            (Application.Current as App).NavigateTo<StockPage>();
         }
 
         protected internal override void OnAppearing()
         {
             base.OnAppearing();
 
-            MessagingCenter.Subscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED, OnColorPicked);
+            MessagingCenter.Subscribe<App, Color>((App)Application.Current, Messages.COLOR_PICKED, OnColorPicked);
         }
 
         protected internal override void OnDisappearing()
         {
-            MessagingCenter.Unsubscribe<App, Color>((App)App.Current, Messages.COLOR_PICKED);
+            MessagingCenter.Unsubscribe<App, Color>((App)Application.Current, Messages.COLOR_PICKED);
 
             base.OnDisappearing();
         }
