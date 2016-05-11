@@ -114,7 +114,7 @@ namespace TDCArcTouch
             var avatarSelected = MommSelected || KazumiSelected || DefaultSelected;
             if(avatarSelected && !string.IsNullOrWhiteSpace(Name))
             {
-                await (App.Current as App).DisplayAlert("Foi.");
+				await Task.Delay(1000);
                 GoToNextPage();
             }
             else
